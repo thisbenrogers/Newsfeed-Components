@@ -219,7 +219,7 @@ createArticle = (object) => {
   p3.textContent = object.thirdParagraph;
   span.textContent = "expand";
 
-  span.addEventListener("click", function () {
+  span.addEventListener("click", () => {
     div.classList.toggle("article-open");
     if (span.textContent !== "expand") {
       span.textContent = "expand";

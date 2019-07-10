@@ -35,8 +35,6 @@ let menuItems = [
 */
 
 let createMenu = (arr) => {
-  console.log("array:", arr);
-  console.log("starting");
   let div = document.createElement("div");
   let ul = document.createElement("ul");
 
@@ -53,12 +51,11 @@ let createMenu = (arr) => {
   ul.appendChild(fragment);
 
   let menuButton = document.querySelector(".menu-button");
-  menuButton.addEventListener("click", function () {
+  menuButton.addEventListener("click", () => {
     div.classList.toggle("menu--open");
   })
-  console.log("finished");
   return div;
 }
 
 let header = document.querySelector(".header");
-header.prepend(createMenu(menuItems))
+header.prepend(createMenu(menuItems));
